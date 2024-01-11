@@ -20,6 +20,7 @@
   background-color: var(--bg-color, #fff);
   font-size: 18px;
   font-weight: var(--weight-main-font);
+  font-variation-settings: 'opsz' 0, 'slnt' 1;
   line-height: 116.667%;
   background-image: var(--bg-image);
   background-position: center;
