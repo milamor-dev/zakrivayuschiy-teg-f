@@ -9,7 +9,7 @@
     --main-font: 'Inter-Variable';
     --accent-font: 'PressStart2P-Regular';
     --weight-main-font: 400;
-    --weight-title-font: 700; 
+    --weight-title-font: 700;
     --bg-color: #fff;
     --Themes-mainColor: #000;
     --bg-image: repeating-linear-gradient(#d3d3d3, transparent 4px),
@@ -27,7 +27,7 @@
         --main-font: 'Inter-Variable';
         --accent-font: 'PressStart2P-Regular';
         --weight-main-font: 400;
-        --weight-title-font: 700; 
+        --weight-title-font: 700;
         --bg-color: #fff;
         --Themes-mainColor: #000;
         --bg-image: repeating-linear-gradient(#d3d3d3, transparent 4px),
@@ -42,7 +42,7 @@
 
   :root.theme-dark {
     --weight-main-font: 465;
-    --weight-title-font: 785; 
+    --weight-title-font: 785;
     --bg-color: #000;
     --Themes-mainColor: #00CC14;
     --bg-image: repeating-linear-gradient(#000, transparent 4px),
@@ -58,7 +58,7 @@
 
     :root {
         --weight-main-font: 465;
-        --weight-title-font: 785; 
+        --weight-title-font: 785;
         --bg-color: #000;
         --Themes-mainColor: #00CC14;
         --bg-image: repeating-linear-gradient(#000, transparent 4px),

@@ -476,12 +476,12 @@ dialog::backdrop {
   100% {
     transform: scale(1.5);
     transform-origin: center;
-  }  
+  }
 }
 
  @keyframes spark {
   
-  0%{
+  0% {
     opacity: 0;
   }
  
