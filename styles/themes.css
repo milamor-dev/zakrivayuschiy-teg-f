@@ -4,3 +4,70 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+    --main-font: 'Inter-Variable';
+    --accent-font: 'PressStart2P-Regular';
+    --weight-main-font: 400;
+    --weight-title-font: 700; 
+    --bg-color: #fff;
+    --Themes-mainColor: #000;
+    --bg-image: repeating-linear-gradient(#d3d3d3, transparent 4px),
+        repeating-linear-gradient(90deg, #d3d3d3, transparent 4px),
+        linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+    --shadow-color: #fff;
+    --button-text-ccolor: #fff;
+    --heart-color-contour: #000;
+    --heart-color-body: #ff0000;
+    }
+
+@media (prefers-color-scheme: light) {
+
+    :root {
+        --main-font: 'Inter-Variable';
+        --accent-font: 'PressStart2P-Regular';
+        --weight-main-font: 400;
+        --weight-title-font: 700; 
+        --bg-color: #fff;
+        --Themes-mainColor: #000;
+        --bg-image: repeating-linear-gradient(#d3d3d3, transparent 4px),
+            repeating-linear-gradient(90deg, #d3d3d3, transparent 4px),
+            linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+        --shadow-color: #fff;
+        --button-text-ccolor: #fff;
+        --heart-color-contour: #000;
+    --heart-color-body: #ff0000;
+        }
+  }
+
+  :root.theme-dark {
+    --weight-main-font: 465;
+    --weight-title-font: 785; 
+    --bg-color: #000;
+    --Themes-mainColor: #00CC14;
+    --bg-image: repeating-linear-gradient(#000, transparent 4px),
+        repeating-linear-gradient(90deg, #000, transparent 4px),
+        linear-gradient(#007f0c, #004306);
+    --shadow-color: #000;
+    --button-text-ccolor: #00CC14;
+    --heart-color-contour: #00CC14;
+    --heart-color-body: #ff0000;
+    }
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --weight-main-font: 465;
+        --weight-title-font: 785; 
+        --bg-color: #000;
+        --Themes-mainColor: #00CC14;
+        --bg-image: repeating-linear-gradient(#000, transparent 4px),
+            repeating-linear-gradient(90deg, #000, transparent 4px),
+            linear-gradient(#007f0c, #004306);
+        --shadow-color: #000;
+        --button-text-ccolor: #00CC14;
+        --heart-color-contour: #00CC14;
+        --heart-color-body: #ff0000;
+        }
+  }
+  
