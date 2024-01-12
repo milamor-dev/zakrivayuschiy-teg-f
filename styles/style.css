@@ -20,7 +20,6 @@
   background-color: var(--bg-color, #fff);
   font-size: 18px;
   font-weight: var(--weight-main-font);
-  font-variation-settings: 'opsz' 0, 'slnt' 1;
   line-height: 116.667%;
   background-image: var(--bg-image);
   background-position: center;
@@ -31,6 +30,7 @@
 }
 
 .content-section {
+  font-variation-settings: 'wght' 500;
   width: var(--content-section-weight);
   margin: auto;
 }
@@ -142,6 +142,7 @@ button[disabled] {
 .card__title {
   font-size: 18px;
   font-weight: var(--weight-title-font);
+  font-variation-settings: 'wght' 600;
   padding: 5px 10px;
 }
 
