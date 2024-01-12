@@ -353,8 +353,8 @@ button[disabled] {
   }
 
 dialog:not([open]) {
-  pointer-events: none;
-  opacity: 0;
+  display: none;
+  /* opacity: 0; */
 } 
 
 dialog::backdrop {
