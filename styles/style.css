@@ -19,7 +19,7 @@
   font-family: var(--main-font, monospace);
   background-color: var(--bg-color, #fff);
   font-size: 18px;
-  font-variation-settings: 'wdth' var(--weight-main-font);
+  font-variation-settings: 'wght' var(--weight-main-font);
   /* font-weight: var(--weight-main-font); */
   line-height: 116.667%;
   background-image: var(--bg-image);
@@ -141,7 +141,7 @@ button[disabled] {
 
 .card__title {
   font-size: 18px;
-  font-variation-settings: 'wdth' var(--weight-title-font);
+  font-variation-settings: 'wght' var(--weight-title-font);
   /* font-weight: var(--weight-title-font); */
   padding: 5px 10px;
 }
