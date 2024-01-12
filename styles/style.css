@@ -19,7 +19,8 @@
   font-family: var(--main-font, monospace);
   background-color: var(--bg-color, #fff);
   font-size: 18px;
-  font-weight: var(--weight-main-font);
+  font-variation-settings: 'wdth' var(--weight-main-font);
+  /* font-weight: var(--weight-main-font); */
   line-height: 116.667%;
   background-image: var(--bg-image);
   background-position: center;
@@ -30,7 +31,6 @@
 }
 
 .content-section {
-  font-variation-settings: 'wght' 500;
   width: var(--content-section-weight);
   margin: auto;
 }
@@ -141,8 +141,8 @@ button[disabled] {
 
 .card__title {
   font-size: 18px;
-  font-weight: var(--weight-title-font);
-  font-variation-settings: 'wght' 600;
+  font-variation-settings: 'wdth' var(--weight-title-font);
+  /* font-weight: var(--weight-title-font); */
   padding: 5px 10px;
 }
 
