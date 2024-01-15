@@ -12,3 +12,108 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.core {
+    transition: fill 0.3s 0.03s linear;
+  }
+  
+  .main-body {
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon:hover .core {
+    transition: fill 0.3s linear;
+    fill: var(--heart-color-contour);
+  }
+  
+  .like-icon:hover .main-body {
+    transition: fill 0.3s 0.05s linear;
+    fill: var(--heart-color-contour);
+  }
+  
+  .like-icon:active .core {
+    transition: fill 0.3s 0.03s linear;
+    fill: var(--heart-color-body);
+  }
+  
+  .like-icon:active .main-body {
+    transition: fill 0.3s 0.05s linear;
+    fill: var(--heart-color-body);
+  }
+  
+  .like-icon.is-liked .core {
+    transition: fill 0.3s linear;
+    fill: var(--heart-color-body);
+  }
+  
+  .like-icon.is-liked .main-body {
+    transition: fill 0.3s 0.05s linear;
+    fill: var(--heart-color-body);
+  }
+  
+  .like-icon .contour {
+    transition: fill 0.1s linear;
+  }
+  
+  .like-icon.is-liked .contour {
+    transition: fill 0.3s 0.06s linear;
+    fill: var(--heart-color-body);
+  }
+  
+  .is-liked .heart {
+    animation: pulse 0.3s 0.1s ease-in alternate;
+  }
+  
+  .sparks {
+    opacity: 0;
+  }
+  
+  .is-liked .sparks {
+    animation: spark 0.3s 0.3s ease-in alternate;
+  }
+
+  @keyframes pointer {
+
+    0% {
+      translate: -8px;
+    }
+  
+    100% {
+      translate: -4px;
+    }
+  }
+  
+  @keyframes move {
+  
+    from {
+      translate: -100% 0%;
+    }
+  
+    to {
+      translate: 0% 0%;
+    }
+  }
+  
+  @keyframes pulse {
+  
+    0% {
+      transform: scale(1);
+      transform-origin: center;
+    }
+  
+    100% {
+      transform: scale(1.5);
+      transform-origin: center;
+    }
+  }
+  
+   @keyframes spark {
+    
+    0% {
+      opacity: 0;
+    }
+   
+    100% {
+      opacity: 1;
+    }
+  }

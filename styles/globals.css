@@ -28,6 +28,7 @@ li {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 button,
@@ -37,11 +38,12 @@ input {
   font-size: inherit;
   background-color: var(--bg-color);
   border: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   cursor: pointer;
 }
 
-button:focus {
+button:focus,
+a:focus {
   outline: none;
 }
 

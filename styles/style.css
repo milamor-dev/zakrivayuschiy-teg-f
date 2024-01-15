@@ -16,11 +16,10 @@
 
 .page {
   color: var(--Themes-mainColor, #000);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font, fantasy);
   background-color: var(--bg-color, #fff);
   font-size: 18px;
   font-variation-settings: 'wght' var(--weight-main-font);
-  /* font-weight: var(--weight-main-font); */
   line-height: 116.667%;
   background-image: var(--bg-image);
   background-position: center;
@@ -32,14 +31,14 @@
 
 .content-section {
   width: var(--content-section-weight);
-  margin: auto;
+  margin: 0 auto;
 }
 
 .header {
   background-color: var(--bg-color);
   border: 2px solid var(--Themes-mainColor, #000);
   margin: 102px auto;
-  height: clamp(20.438rem, 17.875rem + 8.2vw, 23rem);
+  min-height: 368px;
   display: grid;
   grid-template-rows: 1fr  min-content min-content;
   gap: 20px;
@@ -51,6 +50,9 @@
 .accent__content {
   font-family: 'PressStart2P-Regular', monospace;
   font-weight: 400;
+}
+
+.accent__text {
   text-transform: uppercase;
 }
 
@@ -79,12 +81,14 @@
 
 .theme-menu__button {
   position: relative;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
   left: -8px;
+  top: 2px;
   font-family: 'PressStart2P-Regular', monospace;
   font-weight: 400;
   font-size: 14px;
@@ -98,7 +102,6 @@ button[disabled] {
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: opacity 0.3s;
 }
 
 .theme-menu__button:focus {
@@ -129,6 +132,8 @@ button[disabled] {
 .card__list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
 }
 
@@ -142,7 +147,6 @@ button[disabled] {
 .card__title {
   font-size: 18px;
   font-variation-settings: 'wght' var(--weight-title-font);
-  /* font-weight: var(--weight-title-font); */
   padding: 5px 10px;
 }
 
@@ -156,7 +160,7 @@ button[disabled] {
 
 .card__image {
   max-width: 100%;
-  background-size: cover;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -196,11 +200,28 @@ button[disabled] {
   justify-self: self-end;
 }
 
+.button__text {
+  position: relative;
+  z-index: 3;
+  mix-blend-mode: difference;
+  color: var(--button-text-ccolor);
+  white-space: nowrap;
+  display: block;
+  line-height: normal;
+}
+
+.card__button {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 90%;
+  border: 2px solid var(--Themes-mainColor);
+}
+
 .card__like-button {
   padding: 9px 17px;
   width: 130px;
   height: 38px;
-  text-transform: none;
 }
 
 .button__save {
@@ -212,35 +233,16 @@ button[disabled] {
   gap: 3px;
   align-items: center;
   justify-content: center;
-  padding: 12px;
-  text-transform: none;
-  margin-block-start: 3px;
+  padding: 15px;
+  margin-block-end: 80px;
 }
 
-.button__text {
-  position: relative;
-  z-index: 3;
-  mix-blend-mode: difference;
-  color: var(--button-text-ccolor);
-  white-space: nowrap;
-  display: block;
-  line-height: normal;
-}
-
-.button-likeSave {
-  position: relative;
-  overflow: hidden;
-  font-size: 14px;
-  line-height: 90%;
-  border: 2px solid var(--Themes-mainColor);
-}
-
-.button-likeSave:focus-visible {
+.card__button:focus-visible {
   box-shadow: 2px 2px var(--Themes-mainColor);
   transition: box-shadow 0.3s;
 }
 
-.button-likeSave::before {
+.card__button::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -250,7 +252,7 @@ button[disabled] {
   transition: transform 0.5s ease-in-out;
 }
 
-.button-likeSave:hover::before {
+.card__button:hover::before {
   transform: translate(0);
 }
 
@@ -270,79 +272,20 @@ button[disabled] {
 .card__icon-button {
   height: 38px;
   padding: 0;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--Themes-mainColor);
-  transition: border 0.3s ease;
 }
 
-.core {
-  transition: fill 0.3s 0.03s linear;
-}
-
-.main-body {
-  transition: fill 0.3s linear;
-}
-
-.like-icon:hover .core {
-  transition-delay: 0s;
-  fill: var(--heart-color-contour);
-}
-
-.like-icon:hover .main-body {
-  transition-delay: 0.05s;
-  fill: var(--heart-color-contour);
-}
-
-.like-icon:active .core {
-  transition-delay: 0s;
-  fill: var(--heart-color-body);
-}
-
-.like-icon:active .main-body {
-  transition-delay: 0.05s;
-  fill: var(--heart-color-body);
-}
-
-.like-icon.is-liked .core {
-  transition-delay: 0s;
-  fill: var(--heart-color-body);
-}
-
-.like-icon.is-liked .main-body {
-  transition-delay: 0.05s;
-  fill: var(--heart-color-body);
-}
-
-.like-icon .contour {
-  transition: fill 0.1s linear;
-}
-
-.like-icon.is-liked .contour {
-  transition: fill 0.3s 0.06s linear;
-  fill: var(--heart-color-body);
-}
-
-.is-liked .heart {
-  animation: pulse 0.3s 0.1s ease-in alternate;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.is-liked .sparks {
-  animation: spark 0.3s 0.3s ease-in alternate;
-}
-
-/*heart*/
+/*modal-window*/
 
 .modal-window {
   background-color: var(--bg-color, #fff);
   border: 2px solid var(--Themes-mainColor, #000);
   width: 357px;
-  height: 193px;
+  min-height: 193px;
   align-self: center;
   display: grid;
   grid-template-columns: 40px 1fr;
@@ -354,7 +297,6 @@ button[disabled] {
 
 dialog:not([open]) {
   display: none;
-  /* opacity: 0; */
 } 
 
 dialog::backdrop {
@@ -405,14 +347,7 @@ dialog::backdrop {
   filter: saturate(60%) hue-rotate(90deg) brightness(120%);
 }
 
-/*filters*/
-
-.footer {
-  display: grid;
-  padding: 48px 0 80px;
-  justify-content: center;
-  align-items: center;
-}
+/*media*/
 
 @media (width <= 376px) {
 
@@ -428,6 +363,7 @@ dialog::backdrop {
   .button__save {
     grid-template-columns: 310px;
     grid-template-rows: 28px 1fr;
+    gap: 8px;
     height: 84px;
     width: 310px;
   }
@@ -441,53 +377,5 @@ dialog::backdrop {
   .modal-window {
     width: 345px;
     height: 195px;
-  }
-}
-
-/*анимация*/
-
-@keyframes pointer {
-
-  0% {
-    translate: -8px;
-  }
-
-  100% {
-    translate: -4px;
-  }
-}
-
-@keyframes move {
-
-  from {
-    translate: -100% 0%;
-  }
-
-  to {
-    translate: 0% 0%;
-  }
-}
-
-@keyframes pulse {
-
-  0% {
-    transform: scale(1);
-    transform-origin: center;
-  }
-
-  100% {
-    transform: scale(1.5);
-    transform-origin: center;
-  }
-}
-
- @keyframes spark {
-  
-  0% {
-    opacity: 0;
-  }
- 
-  100% {
-    opacity: 1;
   }
 }
