@@ -16,7 +16,7 @@
 
 .page {
   color: var(--Themes-mainColor, #000);
-  font-family: var(--main-font, fantasy);
+  font-family: var(--main-font, monospace);
   background-color: var(--bg-color, #fff);
   font-size: 18px;
   font-variation-settings: 'wght' var(--weight-main-font);
@@ -48,7 +48,7 @@
 }
 
 .accent__content {
-  font-family: 'PressStart2P-Regular', monospace;
+  font-family: 'PressStart2P-Regular', fantasy;
   font-weight: 400;
 }
 
@@ -234,7 +234,7 @@ button[disabled] {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  margin-block-end: 80px;
+  margin-block-end: 105px;
 }
 
 .card__button:focus-visible {
@@ -286,7 +286,6 @@ button[disabled] {
   border: 2px solid var(--Themes-mainColor, #000);
   width: 357px;
   min-height: 193px;
-  align-self: center;
   display: grid;
   grid-template-columns: 40px 1fr;
   gap: 20px;
@@ -313,8 +312,13 @@ dialog::backdrop {
 .modal-button {
   width: clamp(16.063rem, 13.813rem + 7.2vw, 18.313rem);
   height: 38px;
-  justify-self: center;
+}
+
+.modal__form-button {
+  display: grid;
   grid-column: 1/3;
+  justify-content: center;
+  align-items: center;
 }
 
 /*filters*/
@@ -351,6 +355,10 @@ dialog::backdrop {
 
 @media (width <= 376px) {
 
+  .header {
+    min-height: 327px;
+  }
+
   .card__content {
     padding: 24px 28px 25px;
   }
@@ -377,5 +385,6 @@ dialog::backdrop {
   .modal-window {
     width: 345px;
     height: 195px;
+    grid-template-columns: 45px 1fr;
   }
 }
